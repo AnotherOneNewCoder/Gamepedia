@@ -8,6 +8,7 @@ import org.koin.dsl.module
 
 actual fun getCoreDatabaseModule(): Module {
     return module {
+        //single { SqlDriverFactory() }
         single { SqlDriverFactory().getSqlDriver() }
         single { AppDatabase.invoke(get<SqlDriver>()) }
     }

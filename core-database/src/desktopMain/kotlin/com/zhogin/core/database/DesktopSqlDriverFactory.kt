@@ -2,6 +2,8 @@ package com.zhogin.core.database
 
 import app.cash.sqldelight.db.SqlDriver
 import app.cash.sqldelight.driver.jdbc.sqlite.JdbcSqliteDriver
+
+
 //import java.io.File
 //
 //private const val dbName = "AppDatabase.db"
@@ -23,5 +25,18 @@ actual class SqlDriverFactory actual constructor(context: Any?) {
             //url = "jdbc:sqlite:${databasePath.absolutePath}"
             url = "jdbc:sqlite:AppDatabase.db"
         )
+//    }
+//        val driver = JdbcSqliteDriver(
+//            JdbcSqliteDriver.IN_MEMORY,
+//            properties = Properties().apply { put("foreign_keys", "true") }
+//        )
+//        AppDatabase.Schema.awaitCreate(driver)
+//        return driver
+
+//        return JdbcSqliteDriver(
+//            JdbcSqliteDriver.IN_MEMORY,
+//            properties = Properties().apply { put("foreign_keys", "true") }
+//        )
     }
 }
+

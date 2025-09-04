@@ -1,6 +1,5 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
-import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -60,6 +59,7 @@ kotlin {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutinesSwing)
             implementation(libs.sql.delight.desktop)
+            api(libs.sql.delight.common.coroutines)
         }
         iosMain.dependencies {
             implementation(libs.sql.delight.ios)
@@ -72,6 +72,7 @@ sqldelight{
         create("AppDatabase") {
             packageName.set("com.zhogin.core.database")
             srcDirs("src/commonMain/sqldelight")
+//            generateAsync.set(true)
         }
     }
     linkSqlite = true
