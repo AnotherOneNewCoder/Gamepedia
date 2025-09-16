@@ -5,18 +5,20 @@ import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBars
+import androidx.compose.material3.MaterialTheme
+
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import com.zhogin.core.uikit.GamepediaTheme
 import com.zhogin.gamepedia.navigation.FavoriteNavGraph
 import com.zhogin.gamepedia.navigation.GameNavGraph
 import com.zhogin.gamepedia.navigation.SearchNavGraph
 
 @Composable
 fun App() {
-    GamepediaTheme {
+
+    MaterialTheme {
         val navHostController = rememberNavController()
         val bottomPadding = WindowInsets.statusBars.asPaddingValues().calculateBottomPadding()
         NavHost(

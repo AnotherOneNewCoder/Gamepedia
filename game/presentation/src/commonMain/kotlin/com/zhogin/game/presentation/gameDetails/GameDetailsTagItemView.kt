@@ -19,7 +19,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
-import com.zhogin.core.uikit.Background
+
 
 @Composable
 internal fun GameDetailsTagItemView(
@@ -31,7 +31,7 @@ internal fun GameDetailsTagItemView(
         modifier = modifier
             .padding(top = 8.dp, end = 12.dp)
             .background(
-                color = Background,
+                color = Color.White,
                 shape = RoundedCornerShape(200.dp)
             )
             .border(

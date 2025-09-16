@@ -6,8 +6,10 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
+import androidx.navigation.toRoute
 import com.zhogin.game.presentation.game.GameScreen
 import com.zhogin.game.presentation.gameDetails.GameDetailsScreen
+import kotlinx.serialization.Serializable
 
 object GameNavGraph: BaseNavGraph {
 
@@ -15,10 +17,17 @@ object GameNavGraph: BaseNavGraph {
 
         data object Root: Dest("/game-root")
         data object Game: Dest("/game")
-        data object Details: Dest("/game_details/{id}") {
-            fun getRoute(id: Int) = "/game_details/${id}"
-        }
+//        @Serializable
+//        data object Details: Dest("/game_details/{id}") {
+//            fun getRoute(id: Int) = "/game_details/${id}"
+//        }
+//        @Serializable
+//        data object Details: Dest("/game_details/{id}") {
+//            fun getRoute(id: Int) = "/game_details/${id}"
+//        }
     }
+    @Serializable
+    data class Details(val name: Int)
 
     val screenList = mutableListOf<String>()
 
@@ -44,7 +53,10 @@ object GameNavGraph: BaseNavGraph {
                         navHostController.navigate(SearchNavGraph.Dest.Search.route)
                     },
                     onClickGameInfo = {
-                        navHostController.navigate(Dest.Details.getRoute(it))
+
+                        //navHostController.navigate(Dest.Details.getRoute(it))
+                        navHostController.navigate(Details(it))
+
                     },
                     sendScreens = { screens ->
                         screenList.clear()
@@ -55,12 +67,18 @@ object GameNavGraph: BaseNavGraph {
                     }
                 )
             }
-            composable(route = Dest.Details.route) {
-                val id = it.arguments?.getString("id")
+            //composable(route = Dest.Details.route) {
+            composable<Details> {
+                val id: Details = it.toRoute()
+
+
+
+
+
 
                 GameDetailsScreen(
                     modifier = modifier.fillMaxSize(),
-                    id = id.toString(),
+                    id = id.name.toString(),
                     onBackClick = {
                         navHostController.popBackStack()
                         screenList.clear()

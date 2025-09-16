@@ -34,7 +34,8 @@ object FavoriteNavGraph: BaseNavGraph {
                         navHostController.popBackStack()
                     },
                     onDetails = {
-                        navHostController.navigate(GameNavGraph.Dest.Details.getRoute(it))
+                        //navHostController.navigate(GameNavGraph.Dest.Details.getRoute(it))
+                        navHostController.navigate(GameNavGraph.Details(it))
                     },
                 )
             }

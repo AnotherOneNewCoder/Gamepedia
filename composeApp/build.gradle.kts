@@ -9,6 +9,7 @@ plugins {
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.composeHotReload)
     alias(libs.plugins.sql.delight)
+    alias(libs.plugins.kotlinx.serialization)
 }
 
 kotlin {
@@ -49,9 +50,10 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtimeCompose)
+           // implementation(libs.androidx.material)
 
 
-            implementation(projects.coreUikit)
+
             implementation(projects.coreNetwork)
             implementation(projects.coreDatabase)
 
@@ -69,6 +71,7 @@ kotlin {
 
             implementation(libs.navigation.compose)
             implementation(libs.koin.core)
+            implementation(libs.kotlinx.serialization)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

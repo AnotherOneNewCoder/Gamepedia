@@ -22,12 +22,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
-import com.zhogin.core.uikit.Background
-import com.zhogin.core.uikit.SurfaceLowest
+
 
 @Composable
 fun GameItemView(
@@ -58,7 +58,7 @@ fun GameItemView(
             )
             Box(
                 modifier = Modifier.padding(horizontal = 12.dp, vertical = 12.dp).background(
-                    color = SurfaceLowest,
+                    color = Color.White,
                     shape = RoundedCornerShape(12.dp)
                 ).align(Alignment.BottomCenter),
                 //contentAlignment = Alignment.BottomCenter
@@ -88,7 +88,7 @@ fun GameItemView(
                     modifier = Modifier
                         .padding(12.dp)
                         .background(
-                            color = Background,
+                            color = Color.White,
                             shape = CircleShape
                         )
                         .align(Alignment.TopEnd)

@@ -41,7 +41,7 @@ kotlin {
         commonMain.dependencies {
 
             implementation(projects.common.domain)
-            implementation(projects.coreUikit)
+
 
             implementation(compose.runtime)
             implementation(compose.foundation)
