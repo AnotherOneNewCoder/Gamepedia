@@ -2,6 +2,7 @@ package com.zhogin.core.database
 
 import app.cash.sqldelight.db.SqlDriver
 import app.cash.sqldelight.driver.jdbc.sqlite.JdbcSqliteDriver
+import java.util.Properties
 
 
 //import java.io.File
@@ -23,7 +24,9 @@ actual class SqlDriverFactory actual constructor(context: Any?) {
 
         return JdbcSqliteDriver(
             //url = "jdbc:sqlite:${databasePath.absolutePath}"
-            url = "jdbc:sqlite:AppDatabase.db"
+            url = "jdbc:sqlite:AppDatabase.db",
+            properties = Properties(),
+            schema = AppDatabase.Schema
         )
 //    }
 //        val driver = JdbcSqliteDriver(

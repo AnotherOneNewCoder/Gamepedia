@@ -27,11 +27,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
-import com.zhogin.core.uikit.Background
 import com.zhogin.game.domain.model.Developer
 import com.zhogin.game.domain.model.Platform
 import com.zhogin.game.domain.model.Store
@@ -209,7 +209,7 @@ internal fun GameDetailsItemView(
                 onClick = onBackClick,
                 modifier = Modifier
                     .background(
-                        color = Background,
+                        color = Color.White,
                         shape = CircleShape
                     )
             ) {
@@ -226,7 +226,7 @@ internal fun GameDetailsItemView(
                 },
                 modifier = Modifier
                     .background(
-                        color = Background,
+                        color = Color.White,
                         shape = CircleShape
                     )
             ) {
@@ -243,7 +243,7 @@ internal fun GameDetailsItemView(
                 },
                 modifier = Modifier
                     .background(
-                        color = Background,
+                        color = Color.White,
                         shape = CircleShape
                     )
             ) {

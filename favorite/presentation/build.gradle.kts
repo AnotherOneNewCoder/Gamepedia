@@ -51,7 +51,7 @@ kotlin {
             implementation(projects.favorite.domain)
             implementation(projects.common.domain)
             implementation(projects.common.presentation)
-            implementation(projects.coreUikit)
+
 
             implementation(libs.koin.core)
             implementation(libs.koin.compose.viewmodel)

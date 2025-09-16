@@ -42,9 +42,9 @@ kotlin {
             implementation(projects.common.domain)
             implementation(projects.common.presentation)
             implementation(projects.game.domain)
-            implementation(projects.coreUikit)
-            implementation(libs.material.icons.extended)
 
+            implementation(libs.material.icons.extended)
+         //   implementation(libs.androidx.material)
             implementation(libs.koin.compose.viewmodel)
             implementation(libs.coil)
             implementation(libs.coil.ktor)

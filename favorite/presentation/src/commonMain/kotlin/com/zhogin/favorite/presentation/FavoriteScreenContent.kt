@@ -20,7 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import com.zhogin.common.domain.model.Game
 import com.zhogin.common.presentation.GameItemView
-import com.zhogin.core.uikit.Background
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -46,7 +46,7 @@ internal fun FavoriteScreenContent(
                     )
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Background,
+                    containerColor = Color.White,
                     titleContentColor = Color.Black,
                 )
             )

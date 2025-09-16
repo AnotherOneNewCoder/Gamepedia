@@ -38,7 +38,7 @@ plugins {
 include(":composeApp")
 include(":core-database")
 include(":core-network")
-include(":core-uikit")
+
 
 include(":search:data")
 include(":search:domain")
